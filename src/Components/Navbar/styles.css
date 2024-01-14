@@ -1,0 +1,84 @@
+/* .Navbar {
+    height: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    overflow: hidden;
+    gap: 1rem;
+}
+
+.Bar {
+    width: 100%;
+    height: 2rem;
+    background-color: white;
+}
+
+.Navbar.active {
+    max-height: 300px;
+}
+ */
+/* Estilize o componente Navbar */
+.Navbar {
+    height: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    overflow: hidden;
+    gap: 1rem;
+    position: relative;
+}
+
+.Bar {
+    width: 100%;
+    height: 2rem;
+    background-color: white;
+}
+
+/* Defina estilos para o botão de hamburger */
+.hamburger-button {
+    display: block; /* Exibe o botão de hamburger por padrão */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 10px;
+    color: white;
+    position: absolute;
+    top: 10px; /* Ajuste a posição vertical conforme necessário */
+    right: 20px; /* Ajuste a posição horizontal conforme necessário */
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px; /* Ajuste a margem conforme necessário */
+    text-align: center; /* Centralize o conteúdo do menu */
+}
+
+/* Ocultar o menu em telas maiores e mostrar o botão de hamburger */
+@media (min-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .hamburger-button {
+        display: none;
+    }
+}
+
+/* Mostrar o menu em telas menores */
+@media (max-width: 767px) {
+    .menu {
+        display: none; /* Oculta o menu em telas menores */
+        position: absolute;
+        top: 60px; /* Ajuste a posição vertical conforme necessário */
+       
+    }
+}
