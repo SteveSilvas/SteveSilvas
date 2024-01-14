@@ -1,4 +1,10 @@
 .Title {
-    padding: 0.1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    background-color: var(--bg-color);
+    padding: 0px 2rem;
+    color:var(--primary-color);
+}
+
+.Title:hover{
+    color:var(--bg-green-color);
 }

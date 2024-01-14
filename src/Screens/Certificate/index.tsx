@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Contact:React.FC = () => {
+const Certificate:React.FC = () => {
   return (
     <div style={{
         backgroundColor:"blue",
     }}>
-      <h2>Contact</h2>
+      <h2>Certificate</h2>
     </div>
   )
 }
 
-export default Contact;
+export default Certificate;

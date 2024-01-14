@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import "./styles.css";
+import React from 'react';
 import { Link } from 'react-router-dom';
+import "./styles.css";
 interface INavItem {
     path:string;
     title:string;
 }
 const NavItem :React.FC<INavItem> = ({path, title}) =>{
     return (
-       <Link to={path}>
+       <Link to={path} className='NavItem'>
             {title}
        </Link>
     );

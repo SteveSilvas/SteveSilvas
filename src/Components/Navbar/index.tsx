@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
-import "./styles.css";
+import React from 'react';
 import NavItem from './NavItem';
+import "./styles.css";
 
-function Navbar() {
+const  Navbar:React.FC = () => {
     return (
         <nav className={"Navbar"}>
-            <NavItem path='/home' title='Página Inicial'/>
-            <NavItem path='/contact' title='Contato'/>
-            <NavItem path='/contact' title='Contato'/>
+            <NavItem path='/about' title='Sobre'/>
+            <NavItem path='/projects' title='Projetos'/>
+            <NavItem path='/training' title='Formação'/>
+            <NavItem path='/certificate' title='Certificados'/>
+            <NavItem path='/experience' title='Experiências'/>
+            <NavItem path='/skills' title='Habilidades'/>
+            <NavItem path='/contact' title='Contatos'/>
+
         </nav>
     );
 }
