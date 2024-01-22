@@ -7,9 +7,9 @@ const Header: React.FC = () => {
     return (
         <section className='HeaderContainer'>
             <Link to="/" className='Title'>
-                <h2>Steve Silva</h2>
+                Steve Silva
             </Link>
-            <Navbar />
+            <Navbar/>
         </section>
     )
 }

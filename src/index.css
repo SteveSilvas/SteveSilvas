@@ -18,7 +18,7 @@
     --bg-color:#000;
     --bg-green-color:#102A29;
     --gray:#8B8A8A;
-
+    --green:green;
     color: var(--primary-color);
 
 }

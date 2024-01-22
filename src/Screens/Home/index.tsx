@@ -1,18 +1,18 @@
 import React from 'react';
-import image from '../../../public/steve_perfil.jpeg';
 import Box from '../../Components/Box';
 import './styles.css';
+import image from '/steve_perfil.jpeg';
 
 const Home: React.FC = () => {
     return (
         <div className='Page'>
-            <Box>
-                <img src={image} style={{ width: '100%' }} />
+            <Box style={{ width: '100%', height: '100%' }}> 
+                <img src={image} style={{ width: 'auto', height:'100%', alignItems:'center' }} />
             </Box>
 
-            <Box>
+            <Box style={{ width: '100%', height: '100%' }}>
                 <strong> Steve Silva</strong>
-                <span>Desenvolvedor Full Stack</span>
+                <span style={{color:'var(--gray)'}}>Desenvolvedor Full Stack</span>
             </Box>
         </div>
     )
