@@ -2,13 +2,14 @@
   "name": "steve-portifolio",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://stevesilvas.github.io/SteveSilvas/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "gh-pages": "^6.1.1",
