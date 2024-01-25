@@ -2,7 +2,7 @@
   "name": "steve-portifolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://stevesilvas.github.io/SteveSilvas/",
+  "homepage": "https://stevesilvas.github.io/SteveSilvas",
   "type": "module",
   "scripts": {
     "dev": "vite",
