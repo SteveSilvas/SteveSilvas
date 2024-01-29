@@ -6,7 +6,7 @@ import image from '/steve_perfil.jpeg';
 const Home: React.FC = () => {
     return (
         <div className='Page'>
-            <Box style={{ width: '100%', height: '100%' }}> 
+            <Box  className='Image'> 
                 <img src={image} style={{ width: 'auto', height:'100%', alignItems:'center' }} />
             </Box>
 
