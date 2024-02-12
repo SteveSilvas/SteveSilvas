@@ -6,14 +6,19 @@ interface BoxProps {
     children: ReactNode[] | ReactNode;
     className?: string;
     style?: CSSProperties;
+    onClick?: () => void;
 }
 
-const Box: React.FC<BoxProps> = ({children, className, style }) => {
+const Box: React.FC<BoxProps> = ({ children, className, style, onClick }) => {
     const boxContainerClass = 'BoxContainer';
     const combinedClassName = className ? `${boxContainerClass} ${className}` : boxContainerClass;
 
+    const handleOnClick = () => {
+        if (onClick) onClick();
+    }
+
     return (
-        <div className={combinedClassName} style={style}>
+        <div className={combinedClassName} style={style} onClick={handleOnClick}>
             {children}
         </div>
     );

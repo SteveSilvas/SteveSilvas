@@ -16,8 +16,6 @@
     display: grid;
     grid-template-columns: 1fr;
     background-color: var(--bg-green-color);
-    /* min-width: 100%;
-    min-height: 82%; */
     place-items: center;
 }
 

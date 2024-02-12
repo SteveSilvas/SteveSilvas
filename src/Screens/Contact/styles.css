@@ -1,0 +1,47 @@
+.PageContact{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    height: 80vh;
+    padding: 10vh;
+}
+
+.ContactBox{
+    height: 60vh;
+    width: 40vw;
+}
+
+h4, .Icon{
+    color: var(--gray);
+}
+
+.Link{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.LinkRow{
+    color: gray;
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+}
+
+@media (max-width: 560px) {
+    .PageContact {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding:10px;
+        align-items: center;
+    }
+
+    .ContactBox{
+        height: 60vh;
+        width: 90%;
+    }
+
+}

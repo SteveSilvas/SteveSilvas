@@ -5,14 +5,12 @@ import "./styles.css";
 
 const Header: React.FC = () => {
     return (
-        <>
-            <section className='HeaderContainer'>
-                <Link to="/" className='Title'>
-                    Steve Silva
-                </Link>
-            </section>
+        <section className='HeaderContainer'>
+            <Link to="/" className='Title'>
+                Steve Silva
+            </Link>
             <Navbar />
-        </>
+        </section>
     )
 }
 
