@@ -4,15 +4,12 @@ import './styles.css';
 
 interface ModalProps {
     children: ReactNode[] | ReactNode;
-    className?: string;
     style?: CSSProperties;
     closeClick: () => void;
     isOpen: boolean;
 }
 
-const Modal: React.FC<ModalProps> = ({ children, className, style, closeClick, isOpen }) => {
-    // const boxContainerClass = 'ModalContent';
-    // const combinedClassName = className ? `${boxContainerClass} ${className}` : boxContainerClass;
+const Modal: React.FC<ModalProps> = ({ children, style, closeClick, isOpen }) => {
 
     const handleCloseClick = () => {
         closeClick();
