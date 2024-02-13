@@ -1,0 +1,53 @@
+.PageTraining{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    height: 80vh;
+    padding: 10vh;
+}
+
+.TrainingBox{
+    height: 60vh;
+    width: 60vw;
+}
+
+li{
+    color: var(--gray);
+    display:  flex;
+    flex-direction: column;
+}
+
+h4, h5{
+    margin: 0px;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.Link{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 560px) {
+    .PageTraining {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding:10px;
+        align-items: center;
+    }
+
+    .TrainingBox{
+        height: 60vh;
+        width: 90%;
+    }
+
+    ul{
+        gap: 10px;
+    }
+}

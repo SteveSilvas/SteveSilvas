@@ -1,0 +1,51 @@
+.PageCertificate{
+    width: 97%;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+    gap: 1rem;
+    place-items: center;
+}
+
+.BoxCertificate{
+    height: 20rem;
+    width: 100%;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.CertificateImage{
+    width: 100%;
+}
+
+
+@media (max-width: 960px) {
+    .PageCertificate {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (max-width: 660px) {
+    .PageCertificate {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .BoxCertificate{
+        height: 20rem;
+        width: 90%;
+        padding: 4px;
+    }
+}
+
+
+@media (max-width: 560px) {
+    .PageCertificate {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding:10px;
+        align-items: center;
+    }
+}
