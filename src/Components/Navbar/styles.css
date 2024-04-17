@@ -49,25 +49,20 @@
     text-align: center;
 }
 
-.hamburger-button {
+/* .hamburger-button {
     display: none;
-}
+} */
 
 
 @media (max-width: 966px) {
     .menu {
         display: none;
     }
-
-    .hamburger-button {
-        display: block;
-        color: var(--white);
-        background-color: var(--bg-color);
-    }
     
     .hamburger-button {
         display: block;
         color: var(--gray);
+        background-color: var(--bg-color);
     }
 
     .Navbar {
@@ -102,4 +97,5 @@
     .Navbar {
         flex-direction: column;
     }
+
 }

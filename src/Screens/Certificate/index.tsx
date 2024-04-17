@@ -143,7 +143,7 @@ const Certificate: React.FC = () => {
         setShowModal(true);
     }
 
-    const handleCloseModal = () => {
+    const handleCloseModal = (): void => {
         setShowModal(false);
     }
 
@@ -154,7 +154,7 @@ const Certificate: React.FC = () => {
                 closeClick={handleCloseModal}>
                 <img
                     src={certificateSelected.src}
-                    className='CertificateImage' />
+                    className='CertificateImageUnit' />
             </Modal>
 
             {

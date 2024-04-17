@@ -18,6 +18,10 @@
     width: 100%;
 }
 
+.CertificateImageUnit{
+    width: 100%;
+    max-height: 60vh;
+}
 
 @media (max-width: 960px) {
     .PageCertificate {
@@ -37,7 +41,6 @@
         padding: 4px;
     }
 }
-
 
 @media (max-width: 560px) {
     .PageCertificate {

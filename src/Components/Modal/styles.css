@@ -1,4 +1,4 @@
-.ModalContainer  {
+.ModalContainer {
     width: 100vw;
     height: 97vh;
     border: solid 1px var(--gray);
@@ -8,16 +8,11 @@
     align-items: center;
     justify-content: center;
     opacity: unset;
-    background-color: rgba(255, 255, 255, 0.533);
-
-    /* -webkit-box-shadow: 6px 7px 26px -7px var(--gray);
-    -moz-box-shadow: 6px 7px 26px -7px var(--gray);
-    box-shadow: 6px 7px 26px -7px var(--gray);
-    transition: 0.5s; */
+    background-color: var(--bg-green-color);
 }
 
-.ContentContainer{
-    /* height: 90%; */
+.ContentContainer {
+    padding: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -25,14 +20,20 @@
     justify-content: center;
 }
 
-.ButtonArea{
+.ButtonArea {
     height: 10%;
     display: grid;
     grid-template-columns: auto 1fr;
     padding: 4px;
 }
 
-.CloseButton{
+.CloseButton {
     background-color: var(--primary-color);
     width: 10rem;
+}
+
+@media (max-width: 660px) {
+    .ModalContainer {
+        justify-content: flex-start;
+    }
 }

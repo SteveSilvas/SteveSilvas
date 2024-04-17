@@ -7,9 +7,16 @@ interface BoxProps {
     className?: string;
     style?: CSSProperties;
     onClick?: () => void;
+    onMouseEnter?: () => void;
+    onMouseLeave?: () => void;
 }
 
-const Box: React.FC<BoxProps> = ({ children, className, style, onClick }) => {
+const Box: React.FC<BoxProps> = ({ children,
+    className,
+    style,
+    onClick,
+    onMouseEnter,
+    onMouseLeave }) => {
     const boxContainerClass = 'BoxContainer';
     const combinedClassName = className ? `${boxContainerClass} ${className}` : boxContainerClass;
 
@@ -17,8 +24,20 @@ const Box: React.FC<BoxProps> = ({ children, className, style, onClick }) => {
         if (onClick) onClick();
     }
 
+    const handleOnMouseEnter = () => {
+        if (onMouseEnter) onMouseEnter();
+    }
+
+    const handleOnMouseLeave = () => {
+        if (onMouseLeave) onMouseLeave();
+    }
     return (
-        <div className={combinedClassName} style={style} onClick={handleOnClick}>
+        <div
+            className={combinedClassName}
+            style={style}
+            onClick={handleOnClick}
+            onMouseEnter={handleOnMouseEnter}
+            onMouseLeave={handleOnMouseLeave}>
             {children}
         </div>
     );

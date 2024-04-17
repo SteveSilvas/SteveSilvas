@@ -48,7 +48,7 @@
     }
 
     .BoxContainer>img {
-        height: 50vh;
+        height: 100%;
         width: auto;
     }
 }
