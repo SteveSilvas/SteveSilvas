@@ -5,23 +5,24 @@ import './styles.css';
 const Training: React.FC = () => {
     return (
         <section className='PageTraining'>
-            <Box className='TrainingBox'>
-                <h3>Formação acadêmica</h3>
-                <ul>
-                    <li>
-                        <h4>Faculdade Anhanguera - Tecnologia em Desenvolvimento Web</h4>
-                        <h5>Conclusão em 2024</h5>
-                    </li>
-                    <li>
-                        <h4>Etect Albert Einstein - Técnico em Desenvolvimento de Sistemas</h4>
-                        <h5>Conclusão em 2021</h5>
-                    </li>
-                    <li>
-                        <h4>Batista Cepelos - Ensino Médio</h4>
-                        <h5>Conclusão em 2012</h5>
-                    </li>
-                </ul>
-            </Box>
+            <h3 className='TrainingTitle'>Formação acadêmica</h3>
+            <ul className='TrainingList'>
+                <li className='TrainingItem'>
+                    <h4 className='TrainingCompany'>Faculdade Anhanguera</h4>
+                    <h5 className='TrainingName'>Tecnologia em Desenvolvimento Web</h5>
+                    <h6 className='TrainingDate'>Conclusão em 2024</h6>
+                </li>
+                <li className='TrainingItem'>
+                    <h4 className='TrainingCompany'>Etect Albert Einstein</h4>
+                    <h5 className='TrainingName'>Técnico em Desenvolvimento de Sistemas</h5>
+                    <h6 className='TrainingDate'>Conclusão em 2021</h6>
+                </li>
+                <li className='TrainingItem'>
+                    <h4 className='TrainingCompany'>Batista Cepelos</h4>
+                    <h5 className='TrainingName'>Ensino Médio</h5>
+                    <h6 className='TrainingDate'>Conclusão em 2012</h6>
+                </li>
+            </ul>
         </section>
     )
 }

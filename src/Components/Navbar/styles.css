@@ -92,6 +92,7 @@
 @media (max-width: 200px) {
     .HeaderContainer {
         padding: 0% ;
+        display: flex;
         justify-items: center;
         align-items: center; 
     }

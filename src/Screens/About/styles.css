@@ -12,12 +12,6 @@
     align-items: center;
 }
 
-.HeaderContainer {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    padding: 0.5rem 5rem;
-}
-
 .Title {
     font-size: 1.3rem;
     background-color: var(--bg-color);
@@ -37,6 +31,13 @@
     height: auto;
 }
 
+.AboutText {
+    font-size: 1.2rem;
+    color: var(--gray);
+    padding: 1rem 2rem;
+    text-align: justify;
+}
+
 @media (max-width: 600px) {
     .PageAbout {
         grid-template-columns: 1fr;
@@ -51,4 +52,13 @@
         height: 50vh;
         width: auto;
     }
+
+
+    .AboutText {
+        font-size: 1rem;
+        color: var(--gray);
+        padding: 1rem 2rem;
+        text-align: justify;
+    }
+
 }

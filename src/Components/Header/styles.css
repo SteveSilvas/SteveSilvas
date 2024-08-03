@@ -1,19 +1,18 @@
 .HeaderContainer{
     display: grid;
-    grid-template-columns: auto 1fr; 
     padding: 0.5rem 5rem;
 }
 
 .Title {
     font-size: 1.3rem;
-    background-color: var(--bg-color);
+    height: 1.3rem;
     padding: 1rem 2rem;
-    color:var(--primary-color);
+    color:var(--blue);
     transition: 0.5s;
 }
 
 .Title:hover{
-    color:var(--green);
+    color:var(--gray);
     transition: 0.5s;
 }
 
@@ -27,6 +26,7 @@
 @media (max-width: 200px) {
     .HeaderContainer {
         padding: 0% ;
+        display: flex;
         justify-items: center;
         align-items: center; 
     }

@@ -1,14 +1,14 @@
 .BoxContainer {
     font-size: 1.2rem;
-    background-color: var(--bg-green-color);
+    background-color: var(--light   );
     border: solid 2px var(--gray);
-    border-radius: 15px;
+    border-radius: 4px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: black;
+    box-shadow: var(--dark-gray);
 
     -webkit-box-shadow: 6px 7px 26px -7px var(--gray);
     -moz-box-shadow: 6px 7px 26px -7px var(--gray);
@@ -18,17 +18,17 @@
 
 .BoxContainer:hover{
     font-size: 1.2rem;
-    background-color: var(--bg-green-color);
-    border: solid 2px var(--gray);
-    border-radius: 15px;
+    background-color: var(--light);
+    border: solid 2px var(--blue);
+    border-radius: 4px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: black;
-    -webkit-box-shadow: 6px 7px 26px -7px var(--primary-color);
-    -moz-box-shadow: 6px 7px 26px -7px var(--primary-color);
-    box-shadow: 6px 7px 26px -7px var(--primary-color);  
+    box-shadow: var(--dark-gray);
+    -webkit-box-shadow: 6px 7px 26px -7px var(--blue);
+    -moz-box-shadow: 6px 7px 26px -7px var(--blue);
+    box-shadow: 6px 7px 26px -7px var(--blue);  
     transition: 0.5s;
 }

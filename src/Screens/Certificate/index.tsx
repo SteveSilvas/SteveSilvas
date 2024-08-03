@@ -124,6 +124,7 @@ const Certificate: React.FC = () => {
         certificateObjects.map((certificate) => {
             certificates.push(
                 <Box
+                    key={certificate.src}
                     className='BoxCertificate'
                     onClick={() => handleSelectBox(certificate)}>
                     <img

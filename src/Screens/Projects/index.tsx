@@ -7,7 +7,9 @@ const Projects: React.FC = () => {
         <div className='PageProjects'>
             <Box className='Box'>
                 <strong>Projetos</strong>
-                <span style={{ color: 'var(--gray)' }}>Desenvolvedor Full Stack</span>
+                <span style={{ color: 'var(--bg)' }}>
+                    Desenvolvedor Full Stack
+                </span>
             </Box>
         </div>
     )
