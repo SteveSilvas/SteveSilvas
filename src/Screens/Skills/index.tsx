@@ -8,8 +8,8 @@ const Skills: React.FC = () => {
       <h2>Habilidades</h2>
       <div className='SkillsContainer'>
         <Box className='SkillBox'>
-          <h3>Soft Skills</h3>
-          <ul>
+          <h3 className='SkillTitle'>Soft Skills</h3>
+          <ul className='SkillList'>
             <li>Comunicação</li>
             <li>Trabalho em equipe</li>
             <li>Resolução de problemas</li>
@@ -20,8 +20,8 @@ const Skills: React.FC = () => {
           </ul>
         </Box>
         <Box className='SkillBox'>
-          <h3>Front-End</h3>
-          <ul>
+          <h3 className='SkillTitle'>Front-End</h3>
+          <ul className='SkillList'>
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
@@ -31,15 +31,15 @@ const Skills: React.FC = () => {
           </ul>
         </Box>
         <Box className='SkillBox'>
-          <h3>Back-End</h3>
-          <ul>
+          <h3 className='SkillTitle'>Back-End</h3>
+          <ul className='SkillList'>
             <li>.NET</li>
             <li>API</li>
           </ul>
         </Box>
         <Box className='SkillBox'>
-          <h3>Bancos de Dados</h3>
-          <ul>
+          <h3 className='SkillTitle'>Bancos de Dados</h3>
+          <ul className='SkillList'>
             <li>SQL Server</li>
             <li>Postgres</li>
             <li>My SQL</li>
@@ -48,8 +48,8 @@ const Skills: React.FC = () => {
           </ul>
         </Box>
         <Box className='SkillBox'>
-          <h3>Frameworks</h3>
-          <ul>
+          <h3 className='SkillTitle'>Frameworks</h3>
+          <ul className='SkillList'>
             <li>React</li>
             <li>Node</li>
             <li>Express</li>
@@ -58,8 +58,8 @@ const Skills: React.FC = () => {
           </ul>
         </Box>
         <Box className='SkillBox'>
-          <h3>Outras Habilidades</h3>
-          <ul>
+          <h3 className='SkillTitle'>Outras Habilidades</h3>
+          <ul className='SkillList'>
             <li>Design (Figma, Canva)</li>
             <li>Arquitetura de Sistemas</li>
             <li>Documentação</li>
@@ -72,8 +72,8 @@ const Skills: React.FC = () => {
         </Box>
 
         <Box className='SkillBox'>
-          <h3>Linguagens</h3>
-          <ul>
+          <h3 className='SkillTitle'>Linguagens</h3>
+          <ul className='SkillList'>
             <li>C#</li>
             <li>.NET</li>
             <li>Java</li>

@@ -13,6 +13,11 @@ const Navbar: React.FC = () => {
 
     return (
         <>
+            <div className='NavbarMobileButton'>
+                <button className="hamburger-button" onClick={toggleMenu}>
+                    ☰
+                </button>
+            </div>
             <nav className={classe}>
                 <NavItem
                     path='/'
@@ -30,9 +35,6 @@ const Navbar: React.FC = () => {
                 <NavItem path='/skills' title='Habilidades' onClick={toggleMenu} />
                 <NavItem path='/contact' title='Contatos' onClick={toggleMenu} />
             </nav>
-            <button className="hamburger-button" onClick={toggleMenu}>
-                ☰
-            </button>
         </>
     );
 }

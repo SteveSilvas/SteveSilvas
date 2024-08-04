@@ -1,7 +1,7 @@
 .BoxContainer {
     font-size: 1.2rem;
-    background-color: var(--light   );
-    border: solid 2px var(--gray);
+    background-color: var(--light);
+    border: solid 2px var(--light);
     border-radius: 4px;
     overflow: hidden;
     display: flex;
@@ -9,11 +9,10 @@
     align-items: center;
     justify-content: center;
     box-shadow: var(--dark-gray);
-
     -webkit-box-shadow: 6px 7px 26px -7px var(--gray);
     -moz-box-shadow: 6px 7px 26px -7px var(--gray);
     box-shadow: 6px 7px 26px -7px var(--gray);
-    transition: 0.5s;
+    transition: 0.8s;
 }
 
 .BoxContainer:hover{
@@ -30,5 +29,5 @@
     -webkit-box-shadow: 6px 7px 26px -7px var(--blue);
     -moz-box-shadow: 6px 7px 26px -7px var(--blue);
     box-shadow: 6px 7px 26px -7px var(--blue);  
-    transition: 0.5s;
+    transition: 0.8s;
 }

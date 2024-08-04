@@ -42,23 +42,35 @@
     .PageAbout {
         grid-template-columns: 1fr;
         height: auto;
+        padding: 1rem;
+        gap: 0.5rem;
     }
-
-    .BoxContainer {
-        height: auto;
-    }
-
-    .BoxContainer>img {
+    
+    .AboutImageBox {
         height: 50vh;
         width: auto;
     }
 
+    .AboutContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .AboutTitle{
+        font-size: 1.3rem;
+        background-color: var(--bg-color);
+        padding: 1rem;
+        color: var(--dark-gray);
+    }
 
     .AboutText {
         font-size: 1rem;
         color: var(--gray);
-        padding: 1rem 2rem;
+        padding: 1rem;
         text-align: justify;
+        margin: 0px;
     }
 
 }

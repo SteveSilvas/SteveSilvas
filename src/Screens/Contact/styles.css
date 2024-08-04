@@ -10,6 +10,20 @@
     height: 60vh;
     width: 40vw;
 }
+.ContactTitle{
+    margin: 0px;
+    padding-bottom: 10px;
+}
+
+.ContactItem{
+    color: var(--dark-gray);
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+}
+
 
 h4, .Icon{
     color: var(--gray);
@@ -19,15 +33,6 @@ h4, .Icon{
     width: 80%;
     display: flex;
     justify-content: center;
-}
-
-.LinkRow{
-    color: gray;
-    display: flex;
-    width: 40%;
-    align-items: center;
-    justify-content: space-between;
-    height: 3rem;
 }
 
 @media (max-width: 560px) {
@@ -42,6 +47,13 @@ h4, .Icon{
     .ContactBox{
         height: 60vh;
         width: 90%;
+    }
+
+    .ContactItem{
+        flex-direction: column;
+    }
+    .ContactItem > h3{
+        font-size: 1rem;
     }
 
 }

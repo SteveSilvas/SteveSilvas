@@ -33,83 +33,83 @@ const Certificate: React.FC = () => {
     const certificateObjects: Certificate[] = [
         {
             src: design_grafico,
-            alt: "Design Grafico"
+            alt: "Design Gráfico"
         },
         {
             src: html_basico,
-            alt: "html basico"
+            alt: "HTML Básico"
         },
         {
             src: html_css,
-            alt: "html com css"
+            alt: "HTML com CSS"
         },
         {
             src: html_avancado,
-            alt: "html avançado"
+            alt: "HTML Avançado"
         },
         {
             src: css_basico,
-            alt: "inovando com css"
+            alt: "Inovando com CSS"
         },
         {
             src: javascript_intro,
-            alt: "introdução ao javascript"
+            alt: "Introdução ao Javascript"
         },
         {
             src: typescript,
-            alt: "introdução ao typescript"
+            alt: "Introdução ao Typescript"
         },
         {
             src: typescript_poo,
-            alt: "typescript poo"
+            alt: "Programação Orientada a Objetos com Typescript"
         },
         {
             src: react_typescript,
-            alt: "react typescript"
+            alt: "Introdução ao React com Typescript"
         },
         {
             src: node,
-            alt: "node"
+            alt: "Arquitetura REST com NodeJS"
         },
         {
             src: java_basico,
-            alt: "java básico"
+            alt: "Java Básico"
         },
         {
             src: csharp_basico,
-            alt: "csharp básico"
+            alt: "C# Básico"
         },
         {
             src: php_poo,
-            alt: "php basico"
+            alt: "PHP Basico"
         },
         {
             src: modelagem,
-            alt: "modelagem de dados"
+            alt: "Modelagem de Dados"
         },
         {
             src: banco_de_dados,
-            alt: "banco de dados"
+            alt: "Banco de Dados"
         },
         {
             src: seguranca_api,
-            alt: "segurança em API"
+            alt: "Segurança em API"
         },
         {
             src: seguranca_dotnet,
-            alt: "segurança .net"
+            alt: "Segurança .NET"
         },
         {
             src: sistemas,
-            alt: "sistemas"
+            alt: "Sistemas Operacionais"
         },
         {
             src: ingles,
-            alt: "ingles"
+            alt: "Inglês - Basic Review"
         },
         {
             src: lgpd,
-            alt: "lgpd"
+            alt: "Lei Geral de Proteção de Dados - LGPD"
         },
     ];
 
@@ -127,6 +127,7 @@ const Certificate: React.FC = () => {
                     key={certificate.src}
                     className='BoxCertificate'
                     onClick={() => handleSelectBox(certificate)}>
+                    <span>{certificate.alt}</span>
                     <img
                         src={certificate.src}
                         alt={certificate.alt}

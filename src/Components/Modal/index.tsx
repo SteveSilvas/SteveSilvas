@@ -1,5 +1,6 @@
 import React, { CSSProperties, ReactNode } from 'react';
 import './styles.css';
+import Box from '../Box';
 
 
 interface ModalProps {
@@ -17,7 +18,7 @@ const Modal: React.FC<ModalProps> = ({ children, style, closeClick, isOpen }) =>
 
     return (
         isOpen &&
-        <main
+        <Box
             className='ModalContainer'
             style={style}
         >
@@ -32,7 +33,7 @@ const Modal: React.FC<ModalProps> = ({ children, style, closeClick, isOpen }) =>
                     Fechar
                 </button>
             </div>
-        </main>
+        </Box>
     );
 };
 

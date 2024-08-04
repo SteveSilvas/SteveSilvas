@@ -1,23 +1,7 @@
-.ModalContainer  {
-    width: 60vw;
-    height: 60vh;
-    border: solid 1px var(--gray);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: unset;
-    background-color: rgba(255, 255, 255, 0.533);
-
-    /* -webkit-box-shadow: 6px 7px 26px -7px var(--gray);
-    -moz-box-shadow: 6px 7px 26px -7px var(--gray);
-    box-shadow: 6px 7px 26px -7px var(--gray);
-    transition: 0.5s; */
-}
-
-.ContentContainer{
-    /* height: 90%; */
+.ModalContainer {
+    width: 70vw;
+    height: 80vh;
+    border-radius: 4px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -25,14 +9,38 @@
     justify-content: center;
 }
 
-.ButtonArea{
+.ContentContainer {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ButtonArea {
     height: 10%;
     display: grid;
     grid-template-columns: auto 1fr;
     padding: 4px;
 }
 
-.CloseButton{
-    background-color: var(--primary-color);
+.CloseButton {
     width: 10rem;
+    border: 1px solid var(--gray);
+    color: var(--gray);
+}
+
+.CloseButton :hover {
+    width: 10rem;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+}
+
+
+@media (max-width: 966px) {
+    .ModalContainer {
+        width: 100vw;
+        padding: 1rem;
+    }
+
 }

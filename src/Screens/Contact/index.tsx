@@ -11,39 +11,38 @@ const Contact: React.FC = () => {
     return (
         <section className='PageContact'>
             <Box className='ContactBox'>
-                <h3>Contate-me</h3>
-
-                <h4><BsTelephone className='Icon' /> (11)9 9768-1306</h4>
-                <h4><MdEmail className='Icon' /> steve.evets00@gmail.com</h4>
+                <h3 className='ContactTitle'>Contate-me</h3>
+                <div className='ContactItem'>
+                    <BsTelephone className='Icon' />
+                    <h4> (11)9 9768-1306</h4>
+                </div>
+                <div className='ContactItem'>
+                    <MdEmail className='Icon' />
+                    <h4>steve.evets00@gmail.com</h4>
+                </div>
             </Box>
             <Box className='ContactBox'>
-                <h3>Conheça-me</h3>
+                <h3 className='ContactTitle'>Conheça-me</h3>
                 <Link
-                    className='Link'
+                    className='ContactItem'
                     to={"https://www.linkedin.com/in/steve-silva-752563226/"}
                     target='blank'>
-                    <div className='LinkRow'>
-                        <FaLinkedin className='Icon' />
-                        <h3>LinkedIn</h3>
-                    </div>
+                    <FaLinkedin className='Icon' />
+                    <h4>LinkedIn</h4>
                 </Link>
                 <Link
-                    className='Link'
+                    className='ContactItem'
                     to={"https://github.com/SteveSilvas"}
                     target='blank'>
-                    <div className='LinkRow'>
-                        <FaGithub className='Icon' />
-                       <h3>GitHub</h3>
-                    </div>
+                    <FaGithub className='Icon' />
+                    <h4>GitHub</h4>
                 </Link>
                 <Link
-                    className='Link'
+                    className='ContactItem'
                     to={"https://wa.me/5511997681306?text=Inicie+chat+via+WhatsApp"}
                     target='blank'>
-                    <div className='LinkRow'>
-                        <FaWhatsapp className='Icon' />
-                        <h3>WhatsApp</h3>
-                    </div>
+                    <FaWhatsapp className='Icon' />
+                    <h4>WhatsApp</h4>
                 </Link>
             </Box>
         </section>
