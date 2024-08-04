@@ -5,7 +5,7 @@ import './styles.css';
 const Skills: React.FC = () => {
   return (
     <div className='SkillsPage'>
-      <h2>Habilidades</h2>
+      <h2 className='SkillTitlePage'>Habilidades</h2>
       <div className='SkillsContainer'>
         <Box className='SkillBox'>
           <h3 className='SkillTitle'>Soft Skills</h3>

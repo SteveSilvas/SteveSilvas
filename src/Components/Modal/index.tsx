@@ -8,9 +8,10 @@ interface ModalProps {
     style?: CSSProperties;
     closeClick: () => void;
     isOpen: boolean;
+    rightButton?: ReactNode;
 }
 
-const Modal: React.FC<ModalProps> = ({ children, style, closeClick, isOpen }) => {
+const Modal: React.FC<ModalProps> = ({ children, style, closeClick, isOpen, rightButton }) => {
 
     const handleCloseClick = () => {
         closeClick();
@@ -32,6 +33,7 @@ const Modal: React.FC<ModalProps> = ({ children, style, closeClick, isOpen }) =>
                 >
                     Fechar
                 </button>
+                {rightButton}
             </div>
         </Box>
     );

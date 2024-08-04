@@ -3,7 +3,6 @@
     display: flex;
     min-height: 80vh;
     flex-direction: column;
-    justify-content: space-evenly;
 }
 
 h4, h5, h6{

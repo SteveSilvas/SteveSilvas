@@ -19,8 +19,9 @@
 
 .ButtonArea {
     height: 10%;
-    display: grid;
-    grid-template-columns: auto 1fr;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
     padding: 4px;
 }
 

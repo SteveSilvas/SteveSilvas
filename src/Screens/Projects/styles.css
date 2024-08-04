@@ -6,17 +6,72 @@
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    
 }
 
 .BoxProject{
-    height: 15rem;
+    height: 20rem;
     width: 15rem;
     padding: 4px;
     cursor: pointer;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.BoxProject:hover{
+    height: 20rem;
+    width: 15rem;
+    padding: 4px;
+    cursor: pointer;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ProjectTitle{
+    font-size: 1.2rem;
+    padding: 4px;
+    font-weight: bold;
 }
 
 .ProjectImage{
-    width: 100%;
+    width: auto;
+    height: 61%;
+}
+
+.ProjectDescription{
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+    text-align: justify;
+    padding: 0px 1rem;
+}
+
+.ProjectLink{
+    border: 1px solid var(--gray);
+    color: var(--gray);
+    font-size: 1rem;
+    padding: 4px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    transition: 0.8s;
+}
+
+.ProjectLink:hover{
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    font-size: 1rem;
+    padding: 4px;
+    border-radius: 4px;
+    text-align: center;
+    width: 10rem;
+    transition: 0.8s;
+    cursor: pointer;
 }
 
 
@@ -33,7 +88,8 @@
     }
 
     .BoxProject{
-        height: 15rem;
+        width: 90%;
+        height: 20rem;
         padding: 4px;
     }
 }

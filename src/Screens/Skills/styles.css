@@ -24,6 +24,9 @@
     justify-content: center;
 }
 
+.SkillTitlePage{
+    margin: 0px;
+}
 .SkillList{
     display: flex;
     flex-direction: column;
