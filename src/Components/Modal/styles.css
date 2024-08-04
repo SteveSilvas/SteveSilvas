@@ -1,6 +1,6 @@
 .ModalContainer  {
-    width: 100vw;
-    height: 97vh;
+    width: 60vw;
+    height: 60vh;
     border: solid 1px var(--gray);
     overflow: hidden;
     display: flex;

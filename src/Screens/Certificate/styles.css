@@ -9,7 +9,7 @@
 
 .BoxCertificate{
     height: 20rem;
-    width: 100%;
+    /* width: 100%; */
     padding: 4px;
     cursor: pointer;
 }

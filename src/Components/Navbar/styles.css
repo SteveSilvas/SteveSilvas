@@ -9,14 +9,16 @@
 }
 
 .NavItem {
-    color: var(--gray);
+    color: var(--dark-gray);
     transition: 0.5s;
     font-size: 1.2rem;
+    border-bottom: 1px solid var(--light);
 }
 
 .NavItem:hover {
-    color: var(--green);
+    color: var(--blue);
     transition: 0.5s;
+    border-bottom: 1px solid var(--blue);
 }
 
 .hamburger-button {

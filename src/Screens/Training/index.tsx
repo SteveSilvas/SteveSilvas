@@ -1,5 +1,4 @@
 import React from 'react';
-import Box from '../../Components/Box';
 import './styles.css';
 
 const Training: React.FC = () => {
