@@ -34,7 +34,7 @@ const Certificate: React.FC = () => {
     const certificateObjects: Certificate[] = [
         {
             src: tecnico,
-            alt: "Técnico em Desenvolvimento de Sistemas"
+            alt: "Desenvolvimento de Sistemas"
         },
         {
             src: csharp_basico,
