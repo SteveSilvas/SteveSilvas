@@ -1,6 +1,7 @@
 import React, { ReactElement, useState } from 'react';
 import Box from '../../Components/Box';
 import Modal from '../../Components/Modal';
+import tecnico from '../../assets/certificates/tecnico_desenvolvimento_sistemas.jpeg'
 import banco_de_dados from '../../assets/certificates/banco_de_dados.png';
 import csharp_basico from '../../assets/certificates/csharp_basico.png';
 import csharp_poo from '../../assets/certificates/csharp_poo.jpg'
@@ -31,6 +32,10 @@ type Certificate = {
 const Certificate: React.FC = () => {
     const [showModal, setShowModal] = useState<boolean>(false);
     const certificateObjects: Certificate[] = [
+        {
+            src: tecnico,
+            alt: "Técnico em Desenvolvimento de Sistemas"
+        },
         {
             src: csharp_basico,
             alt: "C# Básico"
