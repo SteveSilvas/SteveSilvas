@@ -4,7 +4,6 @@ import './styles.css';
 const Experience: React.FC = () => {
     return (
         <section className='PageExperience'>
-                <h3>Experiências profissionais</h3>
                 <ul className='ExperienceList'>
                     <li className='ExperienceItem'>
                         <h4 className='ExperienceCompany'>Grupo GPS</h4>

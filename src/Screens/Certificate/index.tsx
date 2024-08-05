@@ -3,6 +3,7 @@ import Box from '../../Components/Box';
 import Modal from '../../Components/Modal';
 import banco_de_dados from '../../assets/banco_de_dados.png';
 import csharp_basico from '../../assets/csharp_basico.png';
+import csharp_poo from '../../assets/csharp_poo.jpg'
 import css_basico from '../../assets/css.png';
 import design_grafico from '../../assets/design_grafico.png';
 import html_avancado from '../../assets/html_avancado.png';
@@ -31,6 +32,14 @@ type Certificate = {
 const Certificate: React.FC = () => {
     const [showModal, setShowModal] = useState<boolean>(false);
     const certificateObjects: Certificate[] = [
+        {
+            src: csharp_basico,
+            alt: "C# Básico"
+        },
+        {
+            src: csharp_poo,
+            alt: "C# POO"
+        },
         {
             src: design_grafico,
             alt: "Design Gráfico"
@@ -74,10 +83,6 @@ const Certificate: React.FC = () => {
         {
             src: java_basico,
             alt: "Java Básico"
-        },
-        {
-            src: csharp_basico,
-            alt: "C# Básico"
         },
         {
             src: php_poo,
@@ -156,7 +161,7 @@ const Certificate: React.FC = () => {
                 closeClick={handleCloseModal}>
                 <img
                     src={certificateSelected.src}
-                    className='CertificateImage' />
+                    className='CertificateImageModal' />
             </Modal>
 
             {

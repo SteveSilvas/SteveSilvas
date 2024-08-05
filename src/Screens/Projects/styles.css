@@ -18,6 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    animation: slideUp 0.8s ease-in-out;
 }
 
 .BoxProject:hover{
@@ -75,6 +76,19 @@
 }
 
 
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
 @media (max-width: 960px) {
     .PageProject {
         grid-template-columns: repeat(3, 1fr);
@@ -91,8 +105,10 @@
         width: 90%;
         height: 20rem;
         padding: 4px;
+        cursor: pointer;
     }
 }
+
 
 @media (max-width: 560px) {
     .PageProject {

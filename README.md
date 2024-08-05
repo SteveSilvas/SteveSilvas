@@ -1,7 +1,7 @@
 ### Olá 👋
 [Acessar Portifólio](https://steve.infotecdevs.com.br)
 
-🔭 Atualmente estou trabalhando em projetos full stack com foco em .Net e React.
+* 🔭 Atualmente estou trabalhando em projetos full stack com foco em .Net e React.
 🌱 Estou aprendendo novas tecnologias e práticas de DevOps.
 🤔 Estou interessado em testes automatizados, arquitetura e manutenção de software.
 💬 Pergunte-me sobre desenvolvimento web e práticas de clean code.

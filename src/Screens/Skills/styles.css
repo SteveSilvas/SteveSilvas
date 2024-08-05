@@ -22,11 +22,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: slideUp 0.8s ease-in-out;
 }
 
-.SkillTitlePage{
-    margin: 0px;
-}
 .SkillList{
     display: flex;
     flex-direction: column;
@@ -37,6 +35,19 @@
 .SkillList > li{
     margin-left: 1rem;
 }
+
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 @media (max-width: 560px) {
     li {
@@ -51,7 +62,7 @@
     }
 
     .SkillBox{
-        width: 90%;
+        width: 100%;
         min-height: 12rem;
     }
 

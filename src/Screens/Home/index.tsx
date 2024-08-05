@@ -10,7 +10,7 @@ const Home: React.FC = () => {
                 <img src={image} style={{ width: 'auto', height:'100%', alignItems:'center' }} />
             </Box>
 
-            <Box style={{ width: '100%', height: '100%' }}>
+            <Box className='HomeContainer'>
                 <strong> Steve Silva</strong>
                 <span style={{color:'var(--gray)'}}>Desenvolvedor Full Stack</span>
             </Box>

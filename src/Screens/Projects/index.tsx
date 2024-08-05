@@ -50,7 +50,7 @@ const Projects: React.FC = () => {
         {
             src: portifolio,
             alt: "Portifólio - Web",
-            description: "Constrção do presente site para de",
+            description: "Constrção do presente site.",
             complement: "O software web foi Desenvolvido com React e Typescript aliados a HTML e CSS. A hospedagem foi feita com Docker em uma VPS utilizando o Coolify e GitHub.",
             redirect: "https://github.com/SteveSilvas/SteveSilvas"
         },
@@ -94,15 +94,13 @@ const Projects: React.FC = () => {
     }
 
     const rightButton = (
-        <>
-            <a
-                className='ProjectLink'
-                href={ProjectSelected.redirect}
-                target="_blank"
-                rel="noopener noreferrer">
-                Ver Projeto
-            </a>
-        </>
+        <a
+            className='ProjectLink'
+            href={ProjectSelected.redirect}
+            target="_blank"
+            rel="noopener noreferrer">
+            Ver Projeto
+        </a>
     );
 
     return (

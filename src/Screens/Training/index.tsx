@@ -4,7 +4,6 @@ import './styles.css';
 const Training: React.FC = () => {
     return (
         <section className='PageTraining'>
-            <h3 className='TrainingTitle'>Formação acadêmica</h3>
             <ul className='TrainingList'>
                 <li className='TrainingItem'>
                     <h4 className='TrainingCompany'>Faculdade Anhanguera</h4>

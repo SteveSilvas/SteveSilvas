@@ -6,11 +6,22 @@
     height: 80vh;
 }
 
+.AboutImageBox{
+   width: 100%;
+}
+
 .Image {
     width: auto;
     height: 100%;
     align-items: center;
 }
+.AboutContainer {
+    max-width: 100%;
+    width: 70vw;
+    height: auto;
+    animation: fadeInScale 0.8s ease-in-out;
+}
+
 
 .Title {
     font-size: 1.3rem;
@@ -25,17 +36,24 @@
     transition: 0.5s;
 }
 
-.TextBox {
-    max-width: 100%;
-    width: 70vw;
-    height: auto;
-}
+
 
 .AboutText {
     font-size: 1.2rem;
     color: var(--gray);
     padding: 1rem 2rem;
     text-align: justify;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @media (max-width: 600px) {
