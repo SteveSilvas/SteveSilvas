@@ -14,10 +14,12 @@ import javascript_intro from '../../assets/certificates/intro_javascript.png';
 import java_basico from '../../assets/certificates/java_basico.png';
 import lgpd from '../../assets/certificates/lgpd.png';
 import modelagem from '../../assets/certificates/modelagem.png';
+import intro_powerbi from '../../assets/certificates/introducao_powerbi.png';
 import php_poo from '../../assets/certificates/php_poo.png';
 import react_typescript from '../../assets/certificates/react_typescript.png';
 import node from '../../assets/certificates/rest_node.png';
 import seguranca_api from '../../assets/certificates/seguranca_api.png';
+import seguranca_dotnet from '../../assets/certificates/seguranca_dotnet.png';
 import sistemas from '../../assets/certificates/sistemas.png';
 import typescript from '../../assets/certificates/typescript.png';
 import typescript_poo from '../../assets/certificates/typescript_poo.png';
@@ -96,8 +98,16 @@ const Certificate: React.FC = () => {
             alt: "Banco de Dados"
         },
         {
+            src: intro_powerbi,
+            alt: "Introdução ao PowerBI"
+        },
+        {
             src: seguranca_api,
             alt: "Segurança em API"
+        },
+        {
+            src: seguranca_dotnet,
+            alt: "Segurança .NET"
         },
         {
             src: sistemas,

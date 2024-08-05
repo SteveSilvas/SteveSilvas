@@ -1,11 +1,11 @@
 import React, { ReactElement, useState } from 'react';
 import Box from '../../Components/Box';
 import Modal from '../../Components/Modal';
-import dialogame from '../../assets/dialogame.png';
-import jogo_velha from '../../assets/jogo_velha.png';
-import jogo_velha_web from '../../assets/jogo_velha_web.png';
-import localidados from '../../assets/LocaliDados.png';
-import portifolio from '../../assets/meu_portifolio.png';
+import dialogame from '../../assets/projects/dialogame.png';
+import jogo_velha from '../../assets/projects/jogo_velha.png';
+import jogo_velha_web from '../../assets/projects/jogo_velha_web.png';
+import localidados from '../../assets/projects/LocaliDados.png';
+import portifolio from '../../assets/projects/meu_portifolio.png';
 import './styles.css';
 
 type IProject = {
