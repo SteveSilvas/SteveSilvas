@@ -26,14 +26,14 @@ const Projects: React.FC = () => {
             alt: "Aulas de matemática do Universo Dan Matema - Web",
             description: "Página das aulas particulares de matemática do professor Danilo (Dan Matema).",
             complement: "O software  web foi Desenvolvido com NextJS e Typescript aliados ao Tailwind CSS com a biblioteca de componentes Flowbite. Para lidar com contexto Utilizei a biblioteca Jotai. Para o envio de e-mail utilizei a biblioteca Nodemailer. ",
-            redirect: "aulas.mat.universodanmatema.com.br"
+            redirect: "https://aulas.mat.universodanmatema.com.br"
         },
         {
             src: universodanmatema,
             alt: "Universo Dan Matema - Web",
             description: "Página de apresentação do professor Danilo com suas propostas educacionais.",
             complement: "O software  web foi Desenvolvido com NextJS e Typescript aliados ao Tailwind CSS com a biblioteca de componentes Flowbite. Para lidar com contexto Utilizei a biblioteca Jotai. Para o envio de e-mail utilizei a biblioteca Nodemailer. ",
-            redirect: "universodanmatema.com.br"
+            redirect: "https://universodanmatema.com.br"
         },
         {
             src: dialogame,
