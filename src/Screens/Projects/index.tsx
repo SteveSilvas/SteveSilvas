@@ -6,6 +6,8 @@ import jogo_velha from '../../assets/projects/jogo_velha.png';
 import jogo_velha_web from '../../assets/projects/jogo_velha_web.png';
 import localidados from '../../assets/projects/LocaliDados.png';
 import portifolio from '../../assets/projects/meu_portifolio.png';
+import universodanmatema from '../../assets/projects/universodanmatema.png';
+import aulas_universodanmatema from '../../assets/projects/aulas_universodanmatema.png';
 import './styles.css';
 
 type IProject = {
@@ -19,6 +21,20 @@ type IProject = {
 const Projects: React.FC = () => {
     const [showModal, setShowModal] = useState<boolean>(false);
     const ProjectObjects: IProject[] = [
+        {
+            src: aulas_universodanmatema,
+            alt: "Aulas de matemática do Universo Dan Matema - Web",
+            description: "Página das aulas particulares de matemática do professor Danilo (Dan Matema).",
+            complement: "O software  web foi Desenvolvido com NextJS e Typescript aliados ao Tailwind CSS com a biblioteca de componentes Flowbite. Para lidar com contexto Utilizei a biblioteca Jotai. Para o envio de e-mail utilizei a biblioteca Nodemailer. ",
+            redirect: "aulas.mat.universodanmatema.com.br"
+        },
+        {
+            src: universodanmatema,
+            alt: "Universo Dan Matema - Web",
+            description: "Página de apresentação do professor Danilo com suas propostas educacionais.",
+            complement: "O software  web foi Desenvolvido com NextJS e Typescript aliados ao Tailwind CSS com a biblioteca de componentes Flowbite. Para lidar com contexto Utilizei a biblioteca Jotai. Para o envio de e-mail utilizei a biblioteca Nodemailer. ",
+            redirect: "universodanmatema.com.br"
+        },
         {
             src: dialogame,
             alt: "DIALOGAME - Web",
