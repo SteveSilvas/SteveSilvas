@@ -1,114 +1,185 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BsWhatsapp } from "react-icons/bs";
 import { GrClose, GrMenu } from "react-icons/gr";
 import logotipo from "@/assets/logotipo.png";
 
 const Navbar: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 
-    const toggleSidebar = () => {
-        setIsOpen(!isOpen);
-    };
+	const toggleSidebar = () => {
+		setIsOpen(!isOpen);
+	};
 
-    return (
-        <div
-            className={`${isOpen ? "h-screen" : "h-0"} md:h-auto bg-white text-slate-800 flex flex-col md:flex-row align-center items-center md:p-1`}
-        >
-            <div className="w-full md:w-auto bg-zinc-900/50 min-h-13 flex justify-center md:justify-start items-center relative  p-4 md:p-0">
-                {isOpen ? <GrClose
-                    className="cursor-pointer absolute right-4 md:hidden"
-                    onClick={toggleSidebar} /> :
-                    <GrMenu
-                        className="text-white text-2xl cursor-pointer absolute right-4 top-4 md:hidden"
-                        onClick={toggleSidebar}
-                    />}
-            </div>
-            <Link
-                className={`hover:text-slate-600 font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
-                href={"/"}
-                onClick={() => setIsOpen(!isOpen)}
-            >
-                <Image
-                    src={logotipo}
-                    alt="Logotipo da DomFatia Pizzaria"
-                    width={200}
-                    height={200}
-                    className={`h-40 md:h-15 w-auto mt-4 md:mt-0 ${!isOpen ? "hidden md:block" : ""}`}
-                />
-            </Link>
+	// Fecha o menu ao redimensionar para desktop
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth >= 768 && isOpen) {
+				setIsOpen(false);
+			}
+		};
 
-            <nav className="w-[100%] h-[100%] text-[18px] md:h-auto flex flex-col md:flex-row align-center items-center justify-center md:justify-end gap-10">
-                <Link
-                    className={`hover:text-slate-600 font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
-                    href={"/screens/About"}
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    Sobre
-                </Link>
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, [isOpen]);
 
-                <Link
-                    className={`hover:text-slate-600 font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
-                    href={"/screens/Project"}
-                    onClick={() => setIsOpen(!isOpen)}
-                >
+	// Previne scroll quando o menu mobile está aberto
+	useEffect(() => {
+		if (isOpen) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = 'unset';
+		}
 
-                    Projetos
-                </Link>
+		return () => {
+			document.body.style.overflow = 'unset';
+		};
+	}, [isOpen]);
 
-                <Link
-                    className={`hover:text-slate-600 font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
-                    href={"/screens/Training"}
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    Formação
-                </Link>
+	return (
+		<>
+			{/* Overlay para fechar menu ao clicar fora (mobile) */}
+			{isOpen && (
+				<div
+					className="fixed inset-0 bg-black/50 z-40 md:hidden"
+					onClick={() => setIsOpen(false)}
+				/>
+			)}
 
-                <Link
-                    className={`hover:text-slate-600 font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
-                    href={"/screens/Certifications"}
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    Certificados
-                </Link>
+			<div className="bg-transparent backdrop-blur-sm shadow-sm border-b border-gray-100">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="flex justify-between items-center h-16 md:h-20">
+						{/* Logo */}
+						<Link
+							href="/"
+							className="flex-shrink-0 hover:opacity-80 transition-opacity duration-200"
+							onClick={() => setIsOpen(false)}
+						>
+							<Image
+								src={logotipo}
+								alt="Logotipo da DomFatia Pizzaria"
+								width={160}
+								height={160}
+								className="h-10 md:h-12 w-auto"
+								priority
+							/>
+						</Link>
 
-                <Link
-                    className={`hover:text-slate-600 font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
-                    href={"/screens/experiencias"}
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    Experiências
-                </Link>
+						{/* Desktop Navigation */}
+						<nav className="hidden md:flex items-center space-x-8">
+							<Link
+								href="/screens/About"
+								className="text-slate-700 hover:text-slate-900 font-semibold text-sm uppercase tracking-wide transition-colors duration-200 relative group"
+							>
+								Sobre
+								<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-900 transition-all duration-200 group-hover:w-full"></span>
+							</Link>
 
-                <Link
-                    className={`hover:text-slate-600 font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
-                    href={"/screens/habilities"}
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    Habilidades
-                </Link>
+							<Link
+								href="https://api.whatsapp.com/send?phone=5511997681306"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-flex items-center px-6 py-2.5 text-sm font-semibold text-white bg-green-600 hover:bg-green-700 rounded-full transition-all duration-200 hover:scale-105 hover:shadow-lg"
+							>
+								<BsWhatsapp className="mr-2 text-base" />
+								Contrate
+							</Link>
+						</nav>
 
-                <Link
-                    className={`hover:text-slate-600 font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
-                    href={"/screens/contact"}
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    Contatos
-                </Link>
+						{/* Mobile menu button */}
+						<button
+							onClick={toggleSidebar}
+							className="md:hidden p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-gray-100 transition-colors duration-200"
+							aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+						>
+							{isOpen ? (
+								<GrClose className="h-6 w-6" />
+							) : (
+								<GrMenu className="h-6 w-6" />
+							)}
+						</button>
+					</div>
+				</div>
 
-                <Link
-                    href="https://api.whatsapp.com/send?phone=5511997681306"
-                    target="_blank"
-                    onClick={() => setIsOpen(!isOpen)}
-                    className={`w-40 text-center hover:scale-105 transition-all duration-300 ease-in-out text-slate-800 py-1 px-4 rounded-4xl border-2 border-slate-600 cursor-pointer ${!isOpen ? "hidden md:block" : ""}`}>
-                    <BsWhatsapp className="inline-block mr-2" />
-                    Contrate
-                </Link>
-            </nav>
-        </div>
-    );
+				{/* Mobile Navigation */}
+				<div className={`md:hidden transition-all duration-300 ease-in-out ${isOpen
+					? 'max-h-screen opacity-100'
+					: 'max-h-0 opacity-0 overflow-hidden'
+					}`}>
+					<div className="px-4 pt-4 pb-6 space-y-6 bg-white border-t border-gray-100">
+						<Link
+							href="/screens/About"
+							onClick={() => setIsOpen(false)}
+							className="block text-lg font-semibold text-slate-700 hover:text-slate-900 transition-colors duration-200 py-2"
+						>
+							Sobre
+						</Link>
+
+						<Link
+							className="block text-lg font-semibold text-slate-700 hover:text-slate-900 transition-colors duration-200 py-2"
+							href={"/screens/Project"}
+							onClick={() => setIsOpen(!isOpen)}
+						>
+							Projetos
+						</Link>
+
+						<Link
+							className="block text-lg font-semibold text-slate-700 hover:text-slate-900 transition-colors duration-200 py-2"
+							href={"/screens/Training"}
+							onClick={() => setIsOpen(!isOpen)}
+						>
+							Formação
+						</Link>
+
+						<Link
+							className="block text-lg font-semibold text-slate-700 hover:text-slate-900 transition-colors duration-200 py-2"
+							href={"/screens/Certifications"}
+							onClick={() => setIsOpen(!isOpen)}
+						>
+							Certificados
+						</Link>
+
+						<Link
+							className="block text-lg font-semibold text-slate-700 hover:text-slate-900 transition-colors duration-200 py-2"
+							href={"/screens/experiencias"}
+							onClick={() => setIsOpen(!isOpen)}
+						>
+							Experiências
+						</Link>
+
+						<Link
+							className="block text-lg font-semibold text-slate-700 hover:text-slate-900 transition-colors duration-200 py-2"
+							href={"/screens/habilities"}
+							onClick={() => setIsOpen(!isOpen)}
+						>
+							Habilidades
+						</Link>
+
+						<Link
+							className="block text-lg font-semibold text-slate-700 hover:text-slate-900 transition-colors duration-200 py-2"
+							href={"/screens/contact"}
+							onClick={() => setIsOpen(!isOpen)}
+						>
+							Contatos
+						</Link>
+
+						<Link
+							href="https://api.whatsapp.com/send?phone=5511997681306"
+							target="_blank"
+							rel="noopener noreferrer"
+							onClick={() => setIsOpen(false)}
+							className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-semibold text-white bg-green-600 hover:bg-green-700 rounded-full transition-all duration-200 hover:scale-105"
+						>
+							<BsWhatsapp className="mr-2 text-lg" />
+							Contrate
+						</Link>
+					</div>
+				</div>
+			</div>
+		</>
+	);
 };
 
 export default Navbar;
