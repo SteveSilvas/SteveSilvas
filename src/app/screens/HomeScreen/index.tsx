@@ -16,7 +16,7 @@ const HomeScreen = () => {
 					<div className="absolute top-2 left-4 md:left-12 lg:left-24 w-80 h-80 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-[#E1A937] opacity-90 animate-pulse"></div>
 
 					{/* Círculos secundários */}
-					<div className="absolute top-24 right-4 lg:right-24 w-32 h-32 md:w-40 md:h-40 rounded-full bg-[#E1A937] opacity-30 animate-bounce"></div>
+					<div className="absolute top-24 right-4 lg:right-24 w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-r from-[#E1A937] to-[#cf941e] opacity-30 animate-bounce"></div>
 					{/* <div className="absolute z-50 bottom-20 left-8 lg:left-32 w-20 h-20 md:w-24 md:h-24 rounded-full bg-white opacity-10"></div> */}
 
 					{/* Gradientes decorativos */}
