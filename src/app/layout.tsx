@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Open_Sans, Raleway } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/Components/Navbar";
+import Footer from "@/Components/Footer";
 
 const raleway = Raleway({
 	subsets: ['latin'],
@@ -26,9 +26,7 @@ export default function RootLayout({
 				<header className="fixed top-0 left-0 right-0 z-50">
 					<Navbar />
 				</header>
-				{/* <main className="flex-grow pt-16 md:pt-20"> */}
 					{children}
-				{/* </main> */}
 				<Footer />
 			</body>
 		</html>

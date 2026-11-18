@@ -1,14 +1,19 @@
 import Link from "next/link";
 import { BsWhatsapp } from "react-icons/bs";
 
+const navItems = [
+	{ href: "/screens/About", label: "Sobre" },
+	{ href: "/screens/Projects", label: "Projetos" },
+	{ href: "/screens/Training", label: "Formação" },
+	{ href: "/screens/Certifications", label: "Certificados" },
+	{ href: "/screens/Experiences", label: "Experiências" },
+	{ href: "/screens/Habilities", label: "Habilidades" },
+	{ href: "/screens/Contact", label: "Contatos" },
+];
+
 const NavbarLinksDesktop = () => (
-	<nav className="hidden md:flex items-center space-x-8">
-		{[
-			{ href: "/screens/About", label: "Sobre" },
-			{ href: "/screens/Projects", label: "Projetos" },
-			{ href: "/screens/Training", label: "Formação" },
-			{ href: "/screens/Certifications", label: "Certificados" },
-		].map((item) => (
+	<nav className="hidden md:flex items-center space-x-6">
+		{navItems.map((item) => (
 			<Link
 				key={item.href}
 				href={item.href}

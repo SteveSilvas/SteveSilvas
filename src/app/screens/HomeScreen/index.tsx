@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { FaEnvelope, FaGithub, FaLinkedin, FaArrowRight, FaDownload } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin, FaArrowRight } from "react-icons/fa";
 import profilePic from "@/assets/steve_lado.png";
-import MainContainer from "@/components/MainContainer";
+import MainContainer from "@/Components/MainContainer";
 
 const HomeScreen = () => {
 	return (
@@ -72,19 +72,17 @@ const HomeScreen = () => {
 						</Link>
 
 						<Link
-							href="/cv.pdf"
-							target="_blank"
-							rel="noopener noreferrer"
+							href="/screens/Contact"
 							className="inline-flex items-center justify-center px-4 md:px-8 py-2 md:py-4 text-base font-semibold text-white border-2 border-white/30 rounded-full hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm"
 						>
-							<FaDownload className="mr-2" />
-							Download CV
+							<FaEnvelope className="mr-2" />
+							Entre em contato
 						</Link>
 					</div>
 
 					<div className="flex justify-center lg:justify-start gap-6">
 						<a
-							href="https://github.com/stevesilvas"
+							href="https://github.com/SteveSilvas"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="group p-3 text-white hover:text-[#E1A937] transition-all duration-300 hover:scale-110"

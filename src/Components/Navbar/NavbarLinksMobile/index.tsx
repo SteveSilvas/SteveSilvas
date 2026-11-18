@@ -6,6 +6,16 @@ interface Props {
 	setIsOpen: (open: boolean) => void;
 }
 
+const navItems = [
+	{ href: "/screens/About", label: "Sobre" },
+	{ href: "/screens/Projects", label: "Projetos" },
+	{ href: "/screens/Training", label: "Formação" },
+	{ href: "/screens/Certifications", label: "Certificados" },
+	{ href: "/screens/Experiences", label: "Experiências" },
+	{ href: "/screens/Habilities", label: "Habilidades" },
+	{ href: "/screens/Contact", label: "Contatos" },
+];
+
 const NavbarLinksMobile: React.FC<Props> = ({ isOpen, setIsOpen }) => (
 	<div
 		className={`md:hidden transition-all duration-300 ease-in-out ${
@@ -13,15 +23,7 @@ const NavbarLinksMobile: React.FC<Props> = ({ isOpen, setIsOpen }) => (
 		}`}
 	>
 		<div className="px-4 pt-4 pb-6 space-y-6 bg-white border-t border-gray-100">
-			{[
-				{ href: "/screens/About", label: "Sobre" },
-				{ href: "/screens/Projects", label: "Projetos" },
-				{ href: "/screens/Training", label: "Formação" },
-				{ href: "/screens/Certifications", label: "Certificados" },
-				{ href: "/screens/experiencias", label: "Experiências" },
-				{ href: "/screens/habilities", label: "Habilidades" },
-				{ href: "/screens/contact", label: "Contatos" },
-			].map((item) => (
+			{navItems.map((item) => (
 				<Link
 					key={item.href}
 					href={item.href}
