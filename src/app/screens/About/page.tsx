@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import profilePic from "@/assets/steve_perfil.jpeg";
-import MainContainer from "@/components/MainContainer";
+import MainContainer from "@/Components/MainContainer";
 
 const About: React.FC = () => {
 	return (
