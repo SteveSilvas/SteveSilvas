@@ -5,6 +5,8 @@ import MainContainer from "@/Components/MainContainer";
 import PageTitle from "@/Components/PageTitle";
 
 import dialogame from "@/assets/projects/dialogame.png";
+import jogoDaMemoria from "@/assets/projects/jogo_da_memoria.png";
+import geracaoZine from "@/assets/projects/geracao_zine.png";
 import jogoVelhaWeb from "@/assets/projects/jogo_velha_web.png";
 import jogoVelha from "@/assets/projects/jogo_velha.png";
 import localiDados from "@/assets/projects/LocaliDados.png";
@@ -25,9 +27,25 @@ const projects: Project[] = [
                 src: dialogame,
                 title: "DialoGame - Web",
                 description:
-                        "Jogo infantil para desenvolvimento de habilidades de reconhecimento de letras, leitura e escrita.",
-                stack: "React, TypeScript, HTML, CSS e Jotai.",
-                redirect: "https://app.infotecdevs.com.br",
+                        "Jogo educativo que transforma a alfabetização em brincadeira: reconhecimento de letras, números, vogais e consoantes.",
+                stack: "React, TypeScript, Jotai, HTML e CSS.",
+                redirect: "https://dialo-game.vercel.app",
+        },
+        {
+                src: jogoDaMemoria,
+                title: "Jogo da Memória - Web",
+                description:
+                        "Jogo da memória para dois jogadores: vire as cartas, encontre os pares e marque mais pontos que o adversário.",
+                stack: "React e TypeScript.",
+                redirect: "https://jogo-da-memoria-react-dun.vercel.app",
+        },
+        {
+                src: geracaoZine,
+                title: "Geração Zine - Web",
+                description:
+                        "Plataforma para criadores independentes transformarem ideias, arte e narrativas em publicações autorais.",
+                stack: "Next.js, TypeScript e Tailwind CSS.",
+                redirect: "https://geracao-zine.vercel.app",
         },
         {
                 src: jogoVelhaWeb,
@@ -69,7 +87,8 @@ const projects: Project[] = [
                 title: "Portfólio - Web",
                 description: "Este site, construído para apresentar meus projetos e trajetória.",
                 stack: "Next.js, TypeScript e Tailwind CSS.",
-                redirect: "https://github.com/SteveSilvas/SteveSilvas",
+                redirect:
+                        "http://d7jp7yqkx6bqpqxwobivetu0.143.95.190.192.sslip.io/",
         },
 ];
 

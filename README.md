@@ -11,6 +11,7 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Vamos_conversar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/steve-silva-752563226/)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Solicitar_orçamento-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5511997681306?text=Ol%C3%A1%20Steve!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar%20sobre%20um%20projeto)
 [![E-mail](https://img.shields.io/badge/E--mail-Falar_agora-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:steve.evets00@gmail.com)
+[![Portfólio](https://img.shields.io/badge/Portf%C3%B3lio-Ver_online-8B1E1E?style=for-the-badge&logo=vercel&logoColor=white)](http://d7jp7yqkx6bqpqxwobivetu0.143.95.190.192.sslip.io/)
 
 </div>
 
@@ -100,17 +101,53 @@ testar → publicar**. Sem enrolação, com comunicação clara e foco no result
 
 ## Projetos em destaque
 
+Alguns estão no ar — é só clicar e usar.
+
 <table>
 <tr>
 <td width="50%" valign="top">
 
 ### 🎮 DialoGame
-Jogo infantil para o desenvolvimento de **leitura, escrita e reconhecimento de letras**.
+Jogo educativo que transforma a **alfabetização em brincadeira**: reconhecer letras,
+números, vogais e consoantes. Acessível, responsivo e sem instalar nada.
 <br/><sub>React · TypeScript · Jotai</sub>
 <br/><br/>
-[**Ver no GitHub →**](https://github.com/SteveSilvas/dialo-game)
+[**Jogar agora →**](https://dialo-game.vercel.app) &nbsp;·&nbsp; [**Código →**](https://github.com/SteveSilvas/dialo-game)
 
 </td>
+<td width="50%" valign="top">
+
+### 🃏 Jogo da Memória
+Jogo da memória para **dois jogadores** (ou contra o computador): vire as cartas,
+encontre os pares e marque mais pontos que o adversário.
+<br/><sub>React · TypeScript</sub>
+<br/><br/>
+[**Jogar agora →**](https://jogo-da-memoria-react-dun.vercel.app) &nbsp;·&nbsp; [**Código →**](https://github.com/SteveSilvas/Jogo_da_Memoria_React)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 📰 Geração Zine
+Plataforma **open-source** para criadores independentes transformarem ideias, arte e
+narrativas em publicações autorais na web.
+<br/><sub>Next.js · TypeScript · Tailwind CSS</sub>
+<br/><br/>
+[**Ver o site →**](https://geracao-zine.vercel.app) &nbsp;·&nbsp; [**Código →**](https://github.com/Geracao-Zine/geracao-zine)
+
+</td>
+<td width="50%" valign="top">
+
+### 💼 Portfólio
+Este site, feito para apresentar meus projetos e minha trajetória profissional.
+<br/><sub>Next.js · TypeScript · Tailwind CSS</sub>
+<br/><br/>
+[**Ver online →**](http://d7jp7yqkx6bqpqxwobivetu0.143.95.190.192.sslip.io/) &nbsp;·&nbsp; [**Código →**](https://github.com/SteveSilvas/SteveSilvas)
+
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 ### 📚 Bibliotech
@@ -120,8 +157,6 @@ Jogo infantil para o desenvolvimento de **leitura, escrita e reconhecimento de l
 [**Front-end →**](https://stevesilvas.github.io/Bibliotech_React/) &nbsp;·&nbsp; [**API →**](https://github.com/SteveSilvas/Bibliotech_Node)
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 ### 📍 LocaliDados
@@ -131,6 +166,8 @@ App mobile de **busca de endereço por CEP** e de CEP por endereço.
 [**Ver no GitHub →**](https://github.com/SteveSilvas/LocaliDados)
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 ### 📖 Livro por Livro
@@ -140,8 +177,6 @@ Plataforma de **escambo de livros**, com API back-end e app mobile.
 [**App →**](https://github.com/SteveSilvas/Livro_Por_Livro_React_Native) &nbsp;·&nbsp; [**API →**](https://github.com/SteveSilvas/Books_Barter_Node)
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 ### 🏢 CompanyInfo
@@ -149,6 +184,17 @@ Aplicação para **consultar dados de empresas a partir do CNPJ**.
 <br/><sub>C# · .NET</sub>
 <br/><br/>
 [**Ver no GitHub →**](https://github.com/SteveSilvas/CompanyInfo)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🎓 Universo Dan Matema
+Plataforma educacional de **matemática**, com área de aulas e planos de assinatura.
+<br/><sub>Next.js · TypeScript · Tailwind CSS</sub>
+<br/><br/>
+[**Plataforma →**](https://github.com/SteveSilvas/dan-matema) &nbsp;·&nbsp; [**Aulas →**](https://github.com/SteveSilvas/aulas-mat-universodanmatema)
 
 </td>
 <td width="50%" valign="top">
