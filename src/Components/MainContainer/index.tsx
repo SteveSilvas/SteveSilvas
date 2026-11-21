@@ -5,15 +5,12 @@ export interface IMainContainerProps {
 
 const MainContainer: React.FC<IMainContainerProps> = ({ children, bgColor }) => {
 	return (
-		<div
-			className="container mx-auto px-4 w-full flex flex-col items-center"
-			style={{
-				backgroundColor: bgColor,
-				paddingTop: "4rem",
-			}}
+		<main
+			className="flex w-full flex-1 flex-col items-center pt-16 md:pt-20"
+			style={{ backgroundColor: bgColor }}
 		>
 			{children}
-		</div>
+		</main>
 	);
 };
 

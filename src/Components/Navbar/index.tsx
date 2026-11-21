@@ -10,7 +10,6 @@ const Navbar: React.FC = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const toggleSidebar = () => setIsOpen(!isOpen);
 
-	// Fecha o menu ao redimensionar
 	useEffect(() => {
 		const handleResize = () => {
 			if (window.innerWidth >= 768 && isOpen) setIsOpen(false);
@@ -19,7 +18,6 @@ const Navbar: React.FC = () => {
 		return () => window.removeEventListener("resize", handleResize);
 	}, [isOpen]);
 
-	// Impede scroll ao abrir menu mobile
 	useEffect(() => {
 		document.body.style.overflow = isOpen ? "hidden" : "unset";
 		return () => {
@@ -31,9 +29,9 @@ const Navbar: React.FC = () => {
 		<>
 			<NavbarOverlay isOpen={isOpen} onClose={() => setIsOpen(false)} />
 
-			<div className="bg-transparent backdrop-blur-sm shadow-sm border-b border-gray-100">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="flex justify-between items-center h-16 md:h-20">
+			<div className="border-b border-line/80 bg-paper/85 backdrop-blur-md">
+				<div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+					<div className="flex h-16 items-center justify-between md:h-20">
 						<NavbarLogo onClose={() => setIsOpen(false)} />
 						<NavbarLinksDesktop />
 						<NavbarToggle isOpen={isOpen} toggle={toggleSidebar} />

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import MainContainer from "@/Components/MainContainer";
 import PageTitle from "@/Components/PageTitle";
@@ -27,93 +27,123 @@ import typescript from "@/assets/certificates/typescript.png";
 import typescriptPoo from "@/assets/certificates/typescript_poo.png";
 
 type Certificate = {
-        src: StaticImageData;
-        alt: string;
+	src: StaticImageData;
+	alt: string;
 };
 
 const certificates: Certificate[] = [
-        { src: designGrafico, alt: "Design Gráfico" },
-        { src: htmlBasico, alt: "HTML Básico" },
-        { src: htmlCss, alt: "HTML com CSS" },
-        { src: htmlAvancado, alt: "HTML Avançado" },
-        { src: css, alt: "Inovando com CSS" },
-        { src: introJavascript, alt: "Introdução ao JavaScript" },
-        { src: typescript, alt: "Introdução ao TypeScript" },
-        { src: typescriptPoo, alt: "POO com TypeScript" },
-        { src: reactTypescript, alt: "React com TypeScript" },
-        { src: restNode, alt: "Arquitetura REST com NodeJS" },
-        { src: javaBasico, alt: "Java Básico" },
-        { src: csharpBasico, alt: "C# Básico" },
-        { src: csharpPoo, alt: "C# POO" },
-        { src: phpPoo, alt: "PHP POO" },
-        { src: modelagem, alt: "Modelagem de Dados" },
-        { src: bancoDeDados, alt: "Banco de Dados" },
-        { src: powerbi, alt: "Introdução ao Power BI" },
-        { src: segurancaApi, alt: "Segurança em API" },
-        { src: sistemas, alt: "Sistemas Operacionais" },
-        { src: ingles, alt: "Inglês - Basic Review" },
-        { src: lgpd, alt: "LGPD" },
+	{ src: designGrafico, alt: "Design Gráfico" },
+	{ src: htmlBasico, alt: "HTML Básico" },
+	{ src: htmlCss, alt: "HTML com CSS" },
+	{ src: htmlAvancado, alt: "HTML Avançado" },
+	{ src: css, alt: "Inovando com CSS" },
+	{ src: introJavascript, alt: "Introdução ao JavaScript" },
+	{ src: typescript, alt: "Introdução ao TypeScript" },
+	{ src: typescriptPoo, alt: "POO com TypeScript" },
+	{ src: reactTypescript, alt: "React com TypeScript" },
+	{ src: restNode, alt: "Arquitetura REST com NodeJS" },
+	{ src: javaBasico, alt: "Java Básico" },
+	{ src: csharpBasico, alt: "C# Básico" },
+	{ src: csharpPoo, alt: "C# POO" },
+	{ src: phpPoo, alt: "PHP POO" },
+	{ src: modelagem, alt: "Modelagem de Dados" },
+	{ src: bancoDeDados, alt: "Banco de Dados" },
+	{ src: powerbi, alt: "Introdução ao Power BI" },
+	{ src: segurancaApi, alt: "Segurança em API" },
+	{ src: sistemas, alt: "Sistemas Operacionais" },
+	{ src: ingles, alt: "Inglês - Basic Review" },
+	{ src: lgpd, alt: "LGPD" },
 ];
 
 const Certifications: React.FC = () => {
-        const [selected, setSelected] = useState<Certificate | null>(null);
+	const [selected, setSelected] = useState<Certificate | null>(null);
 
-        return (
-                <MainContainer bgColor="#FAF8F5">
-                        <div className="w-full max-w-6xl min-h-[calc(100vh-5rem)] px-6 py-12">
-                                <PageTitle>Certificados</PageTitle>
+	useEffect(() => {
+		if (!selected) return;
 
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                                        {certificates.map((certificate) => (
-                                                <button
-                                                        key={certificate.alt}
-                                                        onClick={() => setSelected(certificate)}
-                                                        className="bg-white shadow-md rounded-2xl p-4 text-left hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                                                >
-                                                        <div className="relative w-full h-40">
-                                                                <Image
-                                                                        src={certificate.src}
-                                                                        alt={certificate.alt}
-                                                                        fill
-                                                                        className="object-contain"
-                                                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                                                />
-                                                        </div>
-                                                        <span className="block mt-3 text-center font-semibold text-[#8B1E1E]">
-                                                                {certificate.alt}
-                                                        </span>
-                                                </button>
-                                        ))}
-                                </div>
-                        </div>
+		const onKeyDown = (event: KeyboardEvent) => {
+			if (event.key === "Escape") setSelected(null);
+		};
 
-                        {selected && (
-                                <div
-                                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
-                                        onClick={() => setSelected(null)}
-                                >
-                                        <div className="relative max-w-3xl w-full bg-white rounded-2xl p-4">
-                                                <button
-                                                        onClick={() => setSelected(null)}
-                                                        aria-label="Fechar"
-                                                        className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-[#8B1E1E] text-white font-bold"
-                                                >
-                                                        ×
-                                                </button>
-                                                <div className="relative w-full h-[70vh]">
-                                                        <Image
-                                                                src={selected.src}
-                                                                alt={selected.alt}
-                                                                fill
-                                                                className="object-contain"
-                                                                sizes="90vw"
-                                                        />
-                                                </div>
-                                        </div>
-                                </div>
-                        )}
-                </MainContainer>
-        );
+		document.addEventListener("keydown", onKeyDown);
+		document.body.style.overflow = "hidden";
+
+		return () => {
+			document.removeEventListener("keydown", onKeyDown);
+			document.body.style.overflow = "unset";
+		};
+	}, [selected]);
+
+	return (
+		<MainContainer>
+			<div className="w-full max-w-6xl px-5 py-12 sm:px-6 md:py-16 lg:px-8">
+				<PageTitle
+					eyebrow={`${certificates.length} certificados`}
+					description="Cursos de desenvolvimento web, back-end, banco de dados, segurança e metodologias. Clique em um certificado para ampliar."
+				>
+					Certificados
+				</PageTitle>
+
+				<div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+					{certificates.map((certificate) => (
+						<button
+							key={certificate.alt}
+							onClick={() => setSelected(certificate)}
+							className="surface surface-hover flex flex-col overflow-hidden p-3 text-left"
+						>
+							<span className="relative block h-36 w-full rounded-xl bg-paper">
+								<Image
+									src={certificate.src}
+									alt={certificate.alt}
+									fill
+									className="object-contain p-1"
+									sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+								/>
+							</span>
+							<span className="mt-3 px-1 pb-1 text-sm font-semibold text-ink">
+								{certificate.alt}
+							</span>
+						</button>
+					))}
+				</div>
+			</div>
+
+			{selected && (
+				<div
+					className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4 backdrop-blur-sm"
+					onClick={() => setSelected(null)}
+					role="dialog"
+					aria-modal="true"
+					aria-label={selected.alt}
+				>
+					<div
+						className="surface relative w-full max-w-3xl p-3"
+						onClick={(event) => event.stopPropagation()}
+					>
+						<button
+							onClick={() => setSelected(null)}
+							aria-label="Fechar"
+							className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-lg text-ink shadow-sm transition-colors hover:text-wine"
+						>
+							×
+						</button>
+						<div className="relative h-[65vh] w-full rounded-xl bg-paper">
+							<Image
+								src={selected.src}
+								alt={selected.alt}
+								fill
+								className="object-contain p-2"
+								sizes="90vw"
+							/>
+						</div>
+						<p className="px-2 pb-1 pt-3 text-sm font-semibold text-ink">
+							{selected.alt}
+						</p>
+					</div>
+				</div>
+			)}
+		</MainContainer>
+	);
 };
 
 export default Certifications;

@@ -9,15 +9,15 @@ interface Props {
 const NavbarLogo: React.FC<Props> = ({ onClose }) => (
 	<Link
 		href="/"
-		className="flex-shrink-0 hover:opacity-80 transition-opacity duration-200"
+		className="flex-shrink-0 transition-opacity duration-200 hover:opacity-80"
 		onClick={onClose}
 	>
 		<Image
 			src={logotipo}
-			alt="Logotipo"
+			alt="Logotipo Steve Silva"
 			width={160}
 			height={160}
-			className="h-10 md:h-12 w-auto"
+			className="h-9 w-auto md:h-11"
 			priority
 		/>
 	</Link>
