@@ -3,52 +3,59 @@ import MainContainer from "@/Components/MainContainer";
 import PageTitle from "@/Components/PageTitle";
 
 const experiences = [
-        {
-                company: "Grupo GPS",
-                role: "Analista de Sistemas - Pleno",
-                technologies:
-                        "C#, .NET Core, Postgres, Visual Studio, Visual Studio Code, Git, GitHub, JavaScript, TypeScript, React, Postman, Azure",
-                date: "2024 - Atual",
-        },
-        {
-                company: "Copart Leilões Brasil",
-                role: "Desenvolvedor de Sistemas - Júnior",
-                technologies:
-                        "C#, .NET Core, SQL Server, Visual Studio, Visual Studio Code, Git, GitHub, JavaScript, TypeScript, Lit, React Native, Postman, Jira, Jenkins, Spinnaker, IIS",
-                date: "2022 - 2024",
-        },
+	{
+		company: "Grupo GPS",
+		role: "Analista de Sistemas - Pleno",
+		technologies:
+			"C#, .NET Core, Postgres, Visual Studio, Visual Studio Code, Git, GitHub, JavaScript, TypeScript, React, Postman, Azure",
+		date: "2024 - Atual",
+	},
+	{
+		company: "Copart Leilões Brasil",
+		role: "Desenvolvedor de Sistemas - Júnior",
+		technologies:
+			"C#, .NET Core, SQL Server, Visual Studio, Visual Studio Code, Git, GitHub, JavaScript, TypeScript, Lit, React Native, Postman, Jira, Jenkins, Spinnaker, IIS",
+		date: "2022 - 2024",
+	},
 ];
 
 const Experiences: React.FC = () => {
-        return (
-                <MainContainer bgColor="#FAF8F5">
-                        <div className="w-full max-w-4xl min-h-[calc(100vh-5rem)] px-6 py-12">
-                                <PageTitle>Experiências</PageTitle>
+	return (
+		<MainContainer>
+			<div className="w-full max-w-3xl px-5 py-12 sm:px-6 md:py-16 lg:px-8">
+				<PageTitle
+					eyebrow="Carreira"
+					description="Experiência em times de produto e sistemas corporativos, do levantamento de requisitos ao deploy."
+				>
+					Experiências
+				</PageTitle>
 
-                                <ul className="flex flex-col gap-6 mt-8">
-                                        {experiences.map((item) => (
-                                                <li
-                                                        key={item.company}
-                                                        className="bg-white shadow-md rounded-2xl p-6 border-l-4 border-[#8B1E1E] hover:shadow-lg transition-shadow duration-300"
-                                                >
-                                                        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
-                                                                <h3 className="text-xl font-bold text-[#8B1E1E]">
-                                                                        {item.company}
-                                                                </h3>
-                                                                <span className="text-sm font-semibold text-[#E1A937]">
-                                                                        {item.date}
-                                                                </span>
-                                                        </div>
-                                                        <p className="text-gray-800 font-semibold mt-1">{item.role}</p>
-                                                        <p className="text-sm text-gray-600 mt-2">
-                                                                Tecnologias: {item.technologies}
-                                                        </p>
-                                                </li>
-                                        ))}
-                                </ul>
-                        </div>
-                </MainContainer>
-        );
+				<ol className="mt-10 space-y-5 border-l border-line pl-8">
+					{experiences.map((item) => (
+						<li key={item.company} className="relative">
+							<span className="absolute -left-8 top-7 h-3 w-3 -translate-x-1/2 rounded-full border-2 border-paper bg-wine" />
+							<article className="surface surface-hover p-6">
+								<div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+									<h2 className="text-lg font-bold text-ink">{item.company}</h2>
+									<span className="chip chip-wine w-fit">{item.date}</span>
+								</div>
+
+								<p className="mt-1 font-medium text-ink-soft">{item.role}</p>
+
+								<ul className="mt-4 flex flex-wrap gap-1.5">
+									{item.technologies.split(", ").map((tech) => (
+										<li key={tech} className="chip chip-slate">
+											{tech}
+										</li>
+									))}
+								</ul>
+							</article>
+						</li>
+					))}
+				</ol>
+			</div>
+		</MainContainer>
+	);
 };
 
 export default Experiences;

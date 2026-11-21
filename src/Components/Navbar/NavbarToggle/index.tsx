@@ -8,10 +8,11 @@ interface Props {
 const NavbarToggle: React.FC<Props> = ({ isOpen, toggle }) => (
 	<button
 		onClick={toggle}
-		className="md:hidden p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-gray-100 transition-colors duration-200"
+		className="rounded-full p-2.5 text-ink-soft transition-colors duration-200 hover:bg-white hover:text-ink md:hidden"
 		aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+		aria-expanded={isOpen}
 	>
-		{isOpen ? <GrClose className="h-6 w-6" /> : <GrMenu className="h-6 w-6" />}
+		{isOpen ? <GrClose className="h-5 w-5" /> : <GrMenu className="h-5 w-5" />}
 	</button>
 );
 
