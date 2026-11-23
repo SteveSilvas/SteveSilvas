@@ -7,8 +7,9 @@ const NavbarOverlay: React.FC<Props> = ({ isOpen, onClose }) => {
 	if (!isOpen) return null;
 	return (
 		<div
-			className="fixed inset-0 bg-black/50 z-40 md:hidden"
+			className="fixed inset-0 z-40 bg-ink/25 backdrop-blur-sm md:hidden"
 			onClick={onClose}
+			aria-hidden="true"
 		/>
 	);
 };

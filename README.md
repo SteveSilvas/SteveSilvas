@@ -129,6 +129,26 @@ encontre os pares e marque mais pontos que o adversário.
 <tr>
 <td width="50%" valign="top">
 
+### ⭕ Jogo da Velha - Web
+Clássico jogo da velha no navegador, feito para praticar **lógica de programação** e manipulação de DOM.
+<br/><sub>React · TypeScript · HTML · CSS</sub>
+<br/><br/>
+[**Jogar agora →**](https://stevesilvas.github.io/JogoDaVelha/) &nbsp;·&nbsp; [**Código →**](https://github.com/SteveSilvas/JogoDaVelha)
+
+</td>
+<td width="50%" valign="top">
+
+### ❌ Jogo da Velha - Mobile
+Versão mobile do jogo da velha, com **arquivo .apk** disponível para instalação.
+<br/><sub>React Native · TypeScript</sub>
+<br/><br/>
+[**Ver no GitHub →**](https://github.com/SteveSilvas/JogoDaVelha_Mobile)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 ### 📰 Geração Zine
 Plataforma **open-source** para criadores independentes transformarem ideias, arte e
 narrativas em publicações autorais na web.

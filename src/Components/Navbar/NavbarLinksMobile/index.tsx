@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { BsWhatsapp } from "react-icons/bs";
 
 interface Props {
@@ -16,36 +18,45 @@ const navItems = [
 	{ href: "/screens/Contact", label: "Contatos" },
 ];
 
-const NavbarLinksMobile: React.FC<Props> = ({ isOpen, setIsOpen }) => (
-	<div
-		className={`md:hidden transition-all duration-300 ease-in-out ${
-			isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"
-		}`}
-	>
-		<div className="px-4 pt-4 pb-6 space-y-6 bg-white border-t border-gray-100">
-			{navItems.map((item) => (
-				<Link
-					key={item.href}
-					href={item.href}
-					onClick={() => setIsOpen(false)}
-					className="block text-lg font-semibold text-slate-700 hover:text-slate-900 transition-colors duration-200 py-2"
-				>
-					{item.label}
-				</Link>
-			))}
+const NavbarLinksMobile: React.FC<Props> = ({ isOpen, setIsOpen }) => {
+	const pathname = usePathname();
 
-			<Link
-				href="https://api.whatsapp.com/send?phone=5511997681306"
-				target="_blank"
-				rel="noopener noreferrer"
-				onClick={() => setIsOpen(false)}
-				className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-semibold text-white bg-green-600 hover:bg-green-700 rounded-full transition-all duration-200 hover:scale-105"
-			>
-				<BsWhatsapp className="mr-2 text-lg" />
-				Contrate
-			</Link>
+	return (
+		<div
+			className={`overflow-hidden bg-paper transition-all duration-300 ease-in-out md:hidden ${
+				isOpen ? "max-h-[32rem] opacity-100" : "max-h-0 opacity-0"
+			}`}
+		>
+			<nav className="flex flex-col gap-1 border-t border-line px-5 pb-6 pt-4">
+				{navItems.map((item) => (
+					<Link
+						key={item.href}
+						href={item.href}
+						onClick={() => setIsOpen(false)}
+						aria-current={pathname === item.href ? "page" : undefined}
+						className={`rounded-xl px-4 py-3 text-base font-medium transition-colors duration-200 ${
+							pathname === item.href
+								? "bg-wine-tint text-wine"
+								: "text-ink-soft hover:bg-white hover:text-ink"
+						}`}
+					>
+						{item.label}
+					</Link>
+				))}
+
+				<Link
+					href="https://api.whatsapp.com/send?phone=5511997681306"
+					target="_blank"
+					rel="noopener noreferrer"
+					onClick={() => setIsOpen(false)}
+					className="btn btn-primary mt-3 w-full"
+				>
+					<BsWhatsapp className="text-lg" />
+					Contrate
+				</Link>
+			</nav>
 		</div>
-	</div>
-);
+	);
+};
 
 export default NavbarLinksMobile;

@@ -1,25 +1,160 @@
 @import "tailwindcss";
 
-:root {
-	--background: #ffffff;
-	--foreground: #171717;
-}
-
-body {
-	background: var(--background);
-	color: var(--foreground);
-	font-family: var(--font-default, 'Raleway'), sans-serif;
+@theme {
+	--color-paper: #fbfaf7;
+	--color-surface: #ffffff;
+	--color-ink: #1e1b18;
+	--color-ink-soft: #5b544c;
+	--color-line: #ece6dd;
+	--color-wine: #8b1e1e;
+	--color-wine-soft: #a63b3b;
+	--color-wine-tint: #f8edeb;
+	--color-gold: #b9873c;
+	--color-gold-tint: #f9f2e4;
+	--color-slate: #3f5b74;
+	--color-slate-tint: #eef2f6;
 }
 
 @theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
 	--font-sans: var(--font-default);
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
+:root {
+	color-scheme: light;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--color-paper);
+	color: var(--color-ink);
+	font-family: var(--font-default, "Raleway"), sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+::selection {
+	background-color: var(--color-wine-tint);
+	color: var(--color-wine);
+}
+
+:where(a, button, [tabindex]):focus-visible {
+	outline: 2px solid var(--color-wine);
+	outline-offset: 3px;
+}
+
+@layer components {
+	.surface {
+		background-color: var(--color-surface);
+		border: 1px solid var(--color-line);
+		border-radius: 1.5rem;
+		box-shadow:
+		0 1px 2px rgb(30 27 24 / 0.04),
+		0 18px 36px -28px rgb(30 27 24 / 0.35);
+	}
+
+	.surface-hover {
+		transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease,
+		border-color 0.3s ease;
+	}
+
+	.surface-hover:hover {
+		transform: translateY(-3px);
+		border-color: rgb(139 30 30 / 0.18);
+		box-shadow:
+		0 2px 4px rgb(30 27 24 / 0.04),
+		0 24px 40px -28px rgb(30 27 24 / 0.4);
+	}
+
+	.chip {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		border-radius: 9999px;
+		background-color: var(--color-gold-tint);
+		color: #6d4c18;
+		font-size: 0.78rem;
+		font-weight: 600;
+		line-height: 1.4;
+		padding: 0.3rem 0.72rem;
+		white-space: nowrap;
+	}
+
+	.chip-wine {
+		background-color: var(--color-wine-tint);
+		color: var(--color-wine);
+	}
+
+	.chip-slate {
+		background-color: var(--color-slate-tint);
+		color: var(--color-slate);
+	}
+
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		border-radius: 9999px;
+		font-weight: 600;
+		line-height: 1;
+		padding: 0.9rem 1.6rem;
+		transition:
+		background-color 0.25s ease,
+		color 0.25s ease,
+		border-color 0.25s ease,
+		transform 0.25s ease;
+	}
+
+	.btn:hover {
+		transform: translateY(-1px);
+	}
+
+	.btn-primary {
+		background-color: var(--color-wine);
+		color: #fff;
+		box-shadow: 0 12px 24px -18px rgb(139 30 30 / 0.9);
+	}
+
+	.btn-primary:hover {
+		background-color: var(--color-wine-soft);
+	}
+
+	.btn-outline {
+		background-color: var(--color-surface);
+		border: 1px solid var(--color-line);
+		color: var(--color-ink);
+	}
+
+	.btn-outline:hover {
+		border-color: rgb(139 30 30 / 0.28);
+		color: var(--color-wine);
+	}
+
+	.eyebrow {
+		font-size: 0.7rem;
+		font-weight: 700;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+		color: var(--color-gold);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
 	}
 }
